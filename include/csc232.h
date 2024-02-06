@@ -65,8 +65,7 @@ namespace csc232
 /**
 * @brief A simple model of a Dog.
 */
-class Dog
-{
+class Dog {
     public:
     /**
     * @brief Command this Dog to speak.
@@ -89,8 +88,7 @@ class Dog
 #endif // FINISHED_PART_1
 
 #if FINISHED_PART_2
-class Yorkie : public Dog
-{
+class Yorkie : public Dog {
     public:
         Yorkie(const std::string& dogs_name);
         std::string speak() const override;
@@ -99,7 +97,17 @@ class Yorkie : public Dog
         std::string name;
 };
 
-    // TODO: Task 2.a.2 - Add your Yorkie definition below
+Yorkie::Yorkie(const std::string& dogs_name) : name{dogs_name} {
+    std::cout << "A yorkie named " << name << " was just created." << std::endl;
+}
+
+std::string Yorkie::speak() const {
+    std::string response{"DID YOU SAY SPEAK?"};
+}
+
+void Yorkie::sit() const {
+    std::cout << "A yorkie named " << name << " just sat down." << std::endl;
+}
 
     // TODO: Task 2.b.1 - Declare your GreatDaehn class for Task 2b below
 
