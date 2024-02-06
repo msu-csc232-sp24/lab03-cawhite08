@@ -89,7 +89,15 @@ class Dog
 #endif // FINISHED_PART_1
 
 #if FINISHED_PART_2
-    // TODO: Task 2.a.1 - Declare your Yorkie class for Task 2a below
+class Yorkie : public Dog
+{
+    public:
+        Yorkie(const std::string& dogs_name);
+        std::string speak() const override;
+        void sit() const override;
+    private:
+        std::string name;
+};
 
     // TODO: Task 2.a.2 - Add your Yorkie definition below
 
