@@ -18,7 +18,7 @@
 #define TRUE 1
 #define EXECUTE_BLOCK FALSE
 
-#define FINISHED_PART_1 FALSE
+#define FINISHED_PART_1 TRUE
 #define FINISHED_PART_2 FALSE
 #define FINISHED_PART_3 FALSE
 
@@ -61,7 +61,30 @@ using std::setw;
 namespace csc232
 {
 #if FINISHED_PART_1
-    // TODO: Task 1 - Declare your Dog interface below (but before the #endif)
+
+/**
+* @brief A simple model of a Dog.
+*/
+class Dog
+{
+    public:
+    /**
+    * @brief Command this Dog to speak.
+    * @return A translation of what this Dog says in response.
+    */
+    virtual std::string speak() const = 0;
+
+    /**
+    * @brief Command this Dog to sit.
+    * @post  A message is inserted into the standard output stream.
+    */
+    virtual void sit() const = 0;
+
+    /**
+    * Virtual Dog destructor.
+    */
+    virtual ~Dog() = default;
+};
 
 #endif // FINISHED_PART_1
 
